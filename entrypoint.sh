@@ -29,10 +29,10 @@ elif [[ ${harvester} == 'true' ]]; then
     exit
   else
     chia configure --set-farmer-peer ${farmer_address}:${farmer_port}
-    chia start harvester
+    chia start harvester && cd /root/.chia/chiabot && ./chiabot
   fi
 else
-  chia start farmer
+  chia start farmer && cd /root/.chia/chiabot && ./chiabot
 fi
 
 if [[ ${testnet} == "true" ]]; then
