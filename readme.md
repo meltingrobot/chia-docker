@@ -1,5 +1,3 @@
-# Official Chia Docker Container
-
 ## Basic Startup
 ```
 docker run --name <container-name> -d ghcr.io/chia-network/chia:latest
